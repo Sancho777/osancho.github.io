@@ -97,10 +97,12 @@ if (aceitoField) {
 
 // Evento para o envio de form na página sobre.html
 let enviadoBtn = document.getElementsByTagName('button')[0];
-enviadoBtn.addEventListener('click', function () {
-    ga('send', 'event', {
-        eventCategory: 'contato',
-        eventAction: 'enviado',
-        eventLabel: 'enviado'
+if (enviadoBtn) {
+    enviadoBtn.addEventListener('click', function () {
+        ga('send', 'event', {
+            eventCategory: 'contato',
+            eventAction: 'enviado',
+            eventLabel: 'enviado'
+        });
     });
-}); 
+};

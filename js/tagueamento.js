@@ -52,24 +52,26 @@ for (let i = 0; i < verMaisBtns.length; i++) {
 
 // Eventos para campos preenchidos do form na página sobre.html
 let nomeField = document.getElementById('nome');
-if(nomeField){
-nomeField.addEventListener('change', function () {
-    ga('send', 'event', {
-        eventCategory: 'contato',
-        eventAction: 'nome',
-        eventLabel: 'preencheu'
-    })
-});
+if (nomeField) {
+    nomeField.addEventListener('change', function () {
+        ga('send', 'event', {
+            eventCategory: 'contato',
+            eventAction: 'nome',
+            eventLabel: 'preencheu'
+        })
+    });
 };
 
 let emailField = document.getElementById('email');
-emailField.addEventListener('change', function () {
-    ga('send', 'event', {
-        eventCategory: 'contato',
-        eventAction: 'email',
-        eventLabel: 'preencheu'
-    })
-});
+if (nomeField) {
+    emailField.addEventListener('change', function () {
+        ga('send', 'event', {
+            eventCategory: 'contato',
+            eventAction: 'email',
+            eventLabel: 'preencheu'
+        })
+    });
+};
 
 let telefoneField = document.getElementById('telefone');
 telefoneField.addEventListener('change', function () {

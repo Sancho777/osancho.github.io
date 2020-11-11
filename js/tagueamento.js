@@ -74,22 +74,26 @@ if (nomeField) {
 };
 
 let telefoneField = document.getElementById('telefone');
-telefoneField.addEventListener('change', function () {
-    ga('send', 'event', {
-        eventCategory: 'contato',
-        eventAction: 'telefone',
-        eventLabel: 'preencheu'
-    })
-});
+if (telefoneField) {
+    telefoneField.addEventListener('change', function () {
+        ga('send', 'event', {
+            eventCategory: 'contato',
+            eventAction: 'telefone',
+            eventLabel: 'preencheu'
+        })
+    });
+};
 
 let aceitoField = document.getElementById('aceito');
-aceitoField.addEventListener('change', function () {
-    ga('send', 'event', {
-        eventCategory: 'contato',
-        eventAction: 'aceito',
-        eventLabel: 'preencheu'
-    })
-});
+if (aceitoField) {
+    aceitoField.addEventListener('change', function () {
+        ga('send', 'event', {
+            eventCategory: 'contato',
+            eventAction: 'aceito',
+            eventLabel: 'preencheu'
+        })
+    });
+};
 
 // Evento para o envio de form na página sobre.html
 let enviadoBtn = document.getElementsByTagName('button')[0];

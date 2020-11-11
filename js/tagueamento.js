@@ -52,6 +52,7 @@ for (let i = 0; i < verMaisBtns.length; i++) {
 
 // Eventos para campos preenchidos do form na página sobre.html
 let nomeField = document.getElementById('nome');
+if(nomeField){
 nomeField.addEventListener('change', function () {
     ga('send', 'event', {
         eventCategory: 'contato',
@@ -59,6 +60,7 @@ nomeField.addEventListener('change', function () {
         eventLabel: 'preencheu'
     })
 });
+};
 
 let emailField = document.getElementById('email');
 emailField.addEventListener('change', function () {
